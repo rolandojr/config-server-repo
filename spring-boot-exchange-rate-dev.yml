@@ -1,3 +1,18 @@
-api:
-  configuration:
-    description: this is a dev description
+server:
+  port: ${PORT:8081}
+
+spring:
+  application:
+    name: spring-boot-exchange-rate
+  cloud:
+    config:
+      name: spring-boot-exchange-rate
+  datasource:
+    url: jdbc:sqlserver://rolandosqlserver.database.windows.net:1433;database=demodb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    password: patosDOMESTICOS02#
+    username: rolando
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  webflux:
+    base-path: /trade-banking/currency/v1
+  config:
+    import: optional:configserver:${HOSTNAME_CONFIG_SERVER}
