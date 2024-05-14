@@ -12,7 +12,5 @@ spring:
     password: '{cipher}d09ed36938984b657d7e4431ed27696ebb39bd6db6f1805e05d0c68643e7366ad451874698153b5570c070f19b543d40'
     username: rolando
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  webflux:
-    base-path: /trade-banking/currency/v1
   config:
     import: optional:configserver:${HOSTNAME_CONFIG_SERVER}
