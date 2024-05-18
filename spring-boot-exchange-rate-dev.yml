@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  application:
+    name: spring-boot-exchange-rate
+  cloud:
+    config:
+      name: spring-boot-exchange-rate
+  datasource:
+    url: jdbc:sqlserver://rolandosqlserver.database.windows.net:1433;database=demodb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    password: '{cipher}d09ed36938984b657d7e4431ed27696ebb39bd6db6f1805e05d0c68643e7366ad451874698153b5570c070f19b543d40'
+    username: rolando
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
