@@ -1,0 +1,24 @@
+spring:
+  redis:
+    host: rolando.redis.cache.windows.net
+    port: 6380
+    password: '{cipher}ed1c553217dae9eb8c04b8a8e357e803875ba49d27486f80ee96f0fd6b9d143e626cb45df6c6a376a46441dad7d4ed504646ddd8b95998cd5d107253405ecbbe'
+    ssl: true
+    timeout: 10000
+    connectTimeout: 10000
+    clientName: rolando
+  r2dbc:
+    url: r2dbc:postgresql://postgres:postgres@localhost:5432/redis_cache
+    username: postgres
+    password: postgres
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+
