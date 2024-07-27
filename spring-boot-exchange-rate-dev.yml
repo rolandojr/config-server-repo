@@ -8,7 +8,7 @@ spring:
     config:
       name: spring-boot-exchange-rate
   datasource:
-    url: jdbc:sqlserver://localhost:1433;database=demodb;
+    url: jdbc:sqlserver://localhost:1433;database=demodb;encrypt=false
     password: yourStrong(!)Password
     username: sa
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
