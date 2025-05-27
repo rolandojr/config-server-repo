@@ -1,12 +1,23 @@
-server:
-  port: ${PORT:8081}
-
 spring:
-  application:
-    name: spring-boot-exchange-rate
-  cloud:
-    config:
-      name: spring-boot-exchange-rate
   datasource:
-    url: jdbc:sqlserver://localhost:1433;database=demodb;encrypt=false
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:postgresql://204.216.105.102:5432/postgres
+    username: postgres
+    password: ${password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+api:
+  configuration:
+    description: this is a dev description
+
+logging:
+  level:
+    org.springframework.vault: DEBUG
+    org.springframework.cloud.vault: DEBUG
+    org.springframework.vault.authentication: DEBUG
