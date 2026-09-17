@@ -1,2 +1,3 @@
 app:
   title: this is a prod profile
+  description: this is a prod description from yml
